@@ -146,7 +146,12 @@ color:var(--color-change);
 }
 
 .navigation-link::after{
-
+content: "";
+display: block;
+width: 100%;
+height: 4px;
+background-color:currentColor;
+border-radius: 4px;
 }
 
 .header-contacts{
