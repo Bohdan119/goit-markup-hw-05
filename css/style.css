@@ -125,6 +125,18 @@ margin-left: 93px;
 margin-right: auto;
 }
 
+.navigation-link::after {
+content: "";
+position: absolute;
+
+/* bottom: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-color:var(--color-change); */
+
+}
+
 .header-list
 {list-style: none;
 display: flex;
@@ -552,7 +564,7 @@ transition-timing-function: var(--tran-tim-fun);
 .footer-svg:focus{
 background-color: var(--color-change);
 }
-
+/* ----------------MODAL_WINDOW-------------------- */
 .backdrop{
 position: fixed;
 top: 0;
@@ -572,9 +584,9 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
             0px 1px 1px rgba(0, 0, 0, 0.14),
             0px 2px 1px rgba(0, 0, 0, 0.2);
 position: absolute;
-transform: translate(-50%) scale(1) rotate(0);
+transform: translate(-50% -50%) scale(1) rotate(0);
 transition: transform 300ms linear;
-top: 221px;
+top: 50%;
 left: 50%;
 }
 
@@ -608,6 +620,9 @@ right: 8px;
 top: 8px;
 cursor: pointer;
 }
+.modal-button:hover{
+fill: var(--color-change);
+}
 
 .modal-list{
 
@@ -629,12 +644,18 @@ border-radius: 4px;
 .mod-conteiner:last-child {
 margin-bottom: 28px;
 }
+.mod-conteiner:hover{
+border-color: var(--color-change);
+}
+.mod-conteiner:hover .modal-icon{
+fill: var(--color-change);
+}
 
 .modal-text{
 font-size: 14px;
 line-height: 1.166;
 letter-spacing: 0.01em;
-margin-left: 40px;
+padding-left: 40px;
 }
 
 .modal-comment{
@@ -650,8 +671,7 @@ letter-spacing: 0.01em;
 margin-left: 15px;
 fill: var(--color-link);
 }
-.modal-icon-conformation{
-
+.modal-icon:hover{
 }
 
 .confirmation{
@@ -683,6 +703,8 @@ pointer-events: none;
 margin-top: 30px;
 margin-bottom: 40px;
 }
+
+/* ----------------MODAL_WINDOW-------------------- */
 
 
 
@@ -787,4 +809,30 @@ margin-bottom: 4px;
 
 .portfolio-text
 {line-height: 1.875;}
+
+.flex-imeges:hover .portfolio-animation{
+transform: translateY(0);
+}
+
+.conteiner-animation{
+position: relative;
+overflow: hidden;
+}
+.portfolio-animation{
+position: absolute;
+font-size: 18px;
+line-height: 1.555;
+
+background-color: var(--color-change);
+color: var(--color-white);
+overflow: auto;
+height: 100%;
+top: 0;
+padding: 63px 24px;
+text-align: left;
+
+transform: translateY(101%);
+transition: transform 300ms linear;
+}
+
 /*-------------HOME_WORK_ENDED---HW-05----------------*/
