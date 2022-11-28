@@ -828,10 +828,6 @@ margin-bottom: 4px;
 .portfolio-text
 {line-height: 1.875;}
 
-.flex-imeges:hover .portfolio-animation{
-transform: translateY(0);
-}
-
 .conteiner-animation{
 position: relative;
 overflow: hidden;
@@ -851,6 +847,11 @@ text-align: left;
 
 transform: translateY(101%);
 transition: transform 300ms linear;
+}
+
+.portfolio-link:hover .portfolio-animation,
+.portfolio-link:focus .portfolio-animation {
+transform: translateY(0);
 }
 
 /*-------------HOME_WORK_ENDED---HW-05----------------*/
